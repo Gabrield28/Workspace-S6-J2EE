@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+/Users/gab/Desktop/L3 Informatique/Workspace S6 J2E/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+3059417289.index
+1029207474.index
+1175378790.index
+2921982520.index
+3714395441.index
+2714313305.index
+3652457429.index
