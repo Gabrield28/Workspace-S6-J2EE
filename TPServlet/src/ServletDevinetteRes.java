@@ -45,7 +45,6 @@ public class ServletDevinetteRes extends HttpServlet {
 			dispatcher = request.getRequestDispatcher("/WEB-INF/ServletDevinette.jsp");
 		}
 		
-		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**

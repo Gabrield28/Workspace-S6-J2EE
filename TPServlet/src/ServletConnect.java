@@ -30,7 +30,7 @@ public class ServletConnect extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        this.getServletContext().getRequestDispatcher("/WEB-INF/Connexion.jsp").forward(request, response);
+        this.getServletContext().getRequestDispatcher("/Connexion.jsp").forward(request, response);
     }
 
     public void doPost( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
@@ -42,7 +42,7 @@ public class ServletConnect extends HttpServlet {
         session.setAttribute("login", login);
         session.setAttribute("password", password);
         
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/Welcome.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/Welcome.jsp");
         dispatcher.forward(request, response);
 
     }

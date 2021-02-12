@@ -1,0 +1,15 @@
+127.0.0.1 - - [12/Feb/2021:08:38:30 +0100] "GET / HTTP/1.1" 404 956
+0:0:0:0:0:0:0:1 - - [12/Feb/2021:08:42:17 +0100] "GET /TPServlet/ServletDevinette HTTP/1.1" 500 1764
+0:0:0:0:0:0:0:1 - - [12/Feb/2021:08:42:53 +0100] "GET /TPServlet/ServletConnect HTTP/1.1" 200 471
+0:0:0:0:0:0:0:1 - - [12/Feb/2021:08:43:04 +0100] "POST /TPServlet/connexion HTTP/1.1" 404 975
+127.0.0.1 - - [12/Feb/2021:08:46:50 +0100] "GET / HTTP/1.1" 404 956
+0:0:0:0:0:0:0:1 - - [12/Feb/2021:08:46:52 +0100] "GET /TPServlet/ServletConnect HTTP/1.1" 200 471
+0:0:0:0:0:0:0:1 - - [12/Feb/2021:08:46:56 +0100] "POST /TPServlet/connexion HTTP/1.1" 404 975
+0:0:0:0:0:0:0:1 - - [12/Feb/2021:08:48:03 +0100] "GET /TPServlet/ServletConnect HTTP/1.1" 200 471
+0:0:0:0:0:0:0:1 - - [12/Feb/2021:08:48:09 +0100] "POST /TPServlet/connexion HTTP/1.1" 404 975
+0:0:0:0:0:0:0:1 - - [12/Feb/2021:08:48:15 +0100] "GET /TPServlet/ServletConnect HTTP/1.1" 200 471
+0:0:0:0:0:0:0:1 - - [12/Feb/2021:08:48:20 +0100] "POST /TPServlet/connexion HTTP/1.1" 404 975
+0:0:0:0:0:0:0:1 - - [12/Feb/2021:08:52:40 +0100] "GET /TPServlet/Connexion.jsp HTTP/1.1" 200 476
+0:0:0:0:0:0:0:1 - - [12/Feb/2021:08:52:44 +0100] "POST /TPServlet/ServletConnect HTTP/1.1" 200 167
+0:0:0:0:0:0:0:1 - - [12/Feb/2021:08:53:05 +0100] "GET /TPServlet/Devinette.jsp HTTP/1.1" 200 318
+0:0:0:0:0:0:0:1 - - [12/Feb/2021:08:53:09 +0100] "POST /TPServlet/ServletDevinette HTTP/1.1" 500 1622

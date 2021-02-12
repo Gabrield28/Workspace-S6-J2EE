@@ -22,7 +22,8 @@ public class ServletDevinette extends HttpServlet {
      * @see HttpServlet#HttpServlet()
      */
     public ServletDevinette() {
-        super();
+    	super();
+    	int random = (int)(Math.random()*100);
         // TODO Auto-generated constructor stub
     }
 
