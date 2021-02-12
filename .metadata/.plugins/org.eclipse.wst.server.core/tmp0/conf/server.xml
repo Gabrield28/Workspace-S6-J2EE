@@ -126,7 +126,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log." suffix=".txt"/>
 
-      <Context docBase="/Users/gab/Desktop/L3 Informatique/Workspace S6 J2E/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/Users/gab/Desktop/L3 Informatique/Workspace S6 J2E/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/TPServlet" path="/TPServlet" reloadable="true" source="org.eclipse.jst.jee.server:TPServlet"/></Host>
+      <Context docBase="/Users/gab/Desktop/L3 Informatique/Workspace S6 J2E/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/Users/gab/Desktop/L3 Informatique/Workspace S6 J2E/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/TPServlet" path="/TPServlet" reloadable="true" source="org.eclipse.jst.jee.server:TPServlet"/><Context docBase="/Users/gab/Desktop/L3 Informatique/Workspace S6 J2E/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/TPServletFilter" path="/TPServletFilter" reloadable="true" source="org.eclipse.jst.jee.server:TPServletFilter"/></Host>
     </Engine>
   </Service>
 </Server>
