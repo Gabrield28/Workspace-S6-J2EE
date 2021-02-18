@@ -8,8 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
 
 /**
  * Servlet Filter implementation class LoginFilter
@@ -38,13 +37,14 @@ public class LoginFilter implements Filter {
 		// TODO Auto-generated method stub
 		// place your code here
 
-		HttpSession session = (HttpServletRequest)request.getSesion();
+        HttpSession session =((HttpServletRequest)request).getSession(false);
 		
-		if(session != null) {
-			(HttpServletResponse)response.sendRedirect();
-		}else {
+		if(session==null)
+		{
+			((HttpServletResponse)response).sendRedirect("index.html");
 			
 		}
+		else
 		// pass the request along the filter chain
 		chain.doFilter(request, response);
 	}

@@ -41,12 +41,13 @@ public class FacadeServlet extends HttpServlet {
 		HttpSession session = request.getSession(true);
 		
 		String login = request.getParameter("login");
+		int nbco = 0;
 		//String password = request.getParameter("password");
 		
 		session.setAttribute("login", login);
-		//session.setAttribute("password", password);
+		session.setAttribute("nbco", nbco);
 		
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/WelcomeServlet.java");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("WelcomeServlet");
         dispatcher.forward(request, response);
         
 		//doGet(request, response);

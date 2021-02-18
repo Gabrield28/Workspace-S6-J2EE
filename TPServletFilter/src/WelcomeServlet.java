@@ -43,8 +43,11 @@ public class WelcomeServlet extends HttpServlet {
 		HttpSession session = request.getSession(false);
 		
 		if(session != null) {
+			int nbco = (int) session.getAttribute("nbco");
+			nbco++;
+			session.setAttribute("nbco", nbco);
 			String login = (String)session.getAttribute("login");
-			pw.write("Welcome " + login );
+			pw.write("Welcome " + login + ", nombre de connexion : " + nbco);
 		}else {
 			response.sendRedirect("connexion.html");
 		}
