@@ -8,12 +8,14 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
-import javax.servlet.http.*;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet Filter implementation class LoginFilter
  */
-@WebFilter("/LoginFilter")
+@WebFilter(urlPatterns= {"/WelcomeServlet","/FacadeServlet"})
 public class LoginFilter implements Filter {
 
     /**
@@ -37,15 +39,17 @@ public class LoginFilter implements Filter {
 		// TODO Auto-generated method stub
 		// place your code here
 
-        HttpSession session =((HttpServletRequest)request).getSession(false);
-		
+		// pass the request along the filter chain
+		System.out.println("filter execution");
+		HttpSession session=((HttpServletRequest) request).getSession(false);
+		System.out.println("session "+session);
 		if(session==null)
 		{
-			((HttpServletResponse)response).sendRedirect("index.html");
-			
+			//System.out.println("session null");
+			//((HttpServletRequest) request).getRequestDispatcher("index.jsp").include(request, response);
+			((HttpServletResponse) response).sendRedirect("index.jsp");
 		}
 		else
-		// pass the request along the filter chain
 		chain.doFilter(request, response);
 	}
 

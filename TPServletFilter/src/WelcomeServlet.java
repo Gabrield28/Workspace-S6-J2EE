@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+
+
 /**
  * Servlet implementation class WelcomeServlet
  */
@@ -31,7 +33,9 @@ public class WelcomeServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		doPost(request,response);
+		
+		 
 	}
 
 	/**
@@ -39,19 +43,18 @@ public class WelcomeServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		PrintWriter pw = response.getWriter();
-		HttpSession session = request.getSession(false);
-		
-		if(session != null) {
-			int nbco = (int) session.getAttribute("nbco");
-			nbco++;
-			session.setAttribute("nbco", nbco);
-			String login = (String)session.getAttribute("login");
-			pw.write("Welcome " + login + ", nombre de connexion : " + nbco);
-		}else {
-			response.sendRedirect("connexion.html");
-		}
-		doGet(request, response);
+		HttpSession session = request.getSession();
+		String u=(String) session.getAttribute("user");
+		int nb=(int) session.getAttribute("nbCnx");
+		//System.out.println("cnx :"+nb);
+		PrintWriter out  =response.getWriter();
+		 response.setContentType("text/html");
+		 
+		 out.append("Welcome "+ u+" c'est votre "+nb+" connexion (s)");
+		 
+		 nb++;
+		 session.setAttribute("nbCnx", nb);
+		 //System.out.println("cnx :"+nb);
 	}
 
 }
